@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # GitHubリポジトリのルートディレクトリ
-          server-dir: /public_html/  # Xserverの公開ディレクトリ
+          server-dir: /kaminehiro.com/public_html/  # Xserverの公開ディレクトリ
           protocol: ftps  # 推奨されるFTPプロトコル
           port: 21  # FTPのデフォルトポート
           log-level: verbose  # ログ出力を詳細にする
