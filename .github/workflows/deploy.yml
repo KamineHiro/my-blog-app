@@ -1,22 +1,26 @@
-name: Deploy to Xserver
+name: Deploy to Xserver via FTP
 
 on:
   push:
     branches:
-      - main  # `main` ブランチに push されたら実行
+      - main  # mainブランチにpushされたときに実行
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+      - name: Deploy to Xserver via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4  # 最新バージョン
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # GitHubリポジトリのルートディレクトリ
           server-dir: /public_html/  # Xserverの公開ディレクトリ
+          protocol: ftps  # 推奨されるFTPプロトコル
+          port: 21  # FTPのデフォルトポート
+          log-level: verbose  # ログ出力を詳細にする
