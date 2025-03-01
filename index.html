@@ -5,87 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KamineHiroのブログ</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome追加 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>KamineHiroのブログ</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">ホーム</a></li>
-                    <li><a href="#">記事一覧</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- ヘッダープレースホルダー -->
+    <div id="header-placeholder"></div>
 
     <main class="container">
         <section class="blog-posts">
-            <article class="post">
+            <article class="post featured-post">
+                <div class="post-image">
+                    <img src="https://via.placeholder.com/800x400" alt="最初のブログ記事のイメージ">
+                </div>
                 <h2>最初のブログ記事</h2>
                 <div class="post-meta">
-                    <span class="date">2023年10月15日</span>
-                    <span class="author">投稿者: ユーザー</span>
+                    <span class="date"><i class="far fa-calendar-alt"></i> 2023年10月15日</span>
+                    <span class="author"><i class="far fa-user"></i> 投稿者: KamineHiro</span>
+                    <span class="comments"><i class="far fa-comment"></i> 5件のコメント</span>
                 </div>
                 <div class="post-content">
-                    <p>これは最初のブログ記事です。ここに記事の内容が入ります。</p>
-                    <p>段落を追加して、記事を長くすることができます。</p>
+                    <p>これは最初のブログ記事です。プログラミングの旅を始めたきっかけについて書いています。</p>
+                    <p>私がプログラミングに興味を持ったのは高校生の時でした。最初はHTMLとCSSから始め、その後JavaScriptを学びました。</p>
+                    <blockquote>
+                        「プログラミングは単なるコード記述ではなく、問題解決の芸術です。」
+                    </blockquote>
+                    <p>現在は、Webアプリケーション開発に焦点を当てて学習を続けています。ReactやNode.jsなどの最新技術にも挑戦中です。</p>
+                    <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="post-tags">
                     <span class="tag">ブログ</span>
                     <span class="tag">初投稿</span>
+                    <span class="tag">プログラミング</span>
+                </div>
+                <div class="social-share">
+                    <span>シェアする：</span>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </article>
 
             <article class="post">
+                <div class="post-image">
+                    <img src="https://via.placeholder.com/800x400" alt="2番目のブログ記事のイメージ">
+                </div>
                 <h2>2番目のブログ記事</h2>
                 <div class="post-meta">
-                    <span class="date">2023年10月18日</span>
-                    <span class="author">投稿者: ユーザー</span>
+                    <span class="date"><i class="far fa-calendar-alt"></i> 2023年10月18日</span>
+                    <span class="author"><i class="far fa-user"></i> 投稿者: KamineHiro</span>
+                    <span class="comments"><i class="far fa-comment"></i> 3件のコメント</span>
                 </div>
                 <div class="post-content">
-                    <p>これは2番目のブログ記事です。ここに記事の内容が入ります。</p>
-                    <p>画像や他のコンテンツを追加することもできます。</p>
+                    <p>これは2番目のブログ記事です。最近訪れた技術カンファレンスについての感想を書いています。</p>
+                    <p>先週末、東京で開催されたWebデベロッパーカンファレンスに参加してきました。多くの興味深いセッションがありましたが、特にWebパフォーマンス最適化に関するワークショップが印象的でした。</p>
+                    <p>以下は、カンファレンスで学んだ主要なポイントです：</p>
+                    <ul>
+                        <li>画像の最適化テクニック</li>
+                        <li>レイジーローディングの実装方法</li>
+                        <li>モダンCSSフレームワークの比較</li>
+                    </ul>
+                    <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="post-tags">
                     <span class="tag">ブログ</span>
-                    <span class="tag">サンプル</span>
+                    <span class="tag">カンファレンス</span>
+                    <span class="tag">Web開発</span>
+                </div>
+                <div class="social-share">
+                    <span>シェアする：</span>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </article>
+            
+            <article class="post">
+                <div class="post-image">
+                    <img src="https://via.placeholder.com/800x400" alt="3番目のブログ記事のイメージ">
+                </div>
+                <h2>初心者向けJavaScript入門</h2>
+                <div class="post-meta">
+                    <span class="date"><i class="far fa-calendar-alt"></i> 2023年10月22日</span>
+                    <span class="author"><i class="far fa-user"></i> 投稿者: KamineHiro</span>
+                    <span class="comments"><i class="far fa-comment"></i> 8件のコメント</span>
+                </div>
+                <div class="post-content">
+                    <p>JavaScriptを始めたばかりの方向けに、基本的な概念と実践的なコード例を紹介します。</p>
+                    <p>JavaScriptは現代のWeb開発において不可欠な言語です。この記事では、変数、関数、条件文などの基本から解説します。</p>
+                    <pre><code>
+// 簡単なJavaScript例
+function greet(name) {
+    return `こんにちは、${name}さん！`;
+}
+
+console.log(greet('読者'));
+                    </code></pre>
+                    <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="post-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">プログラミング</span>
+                    <span class="tag">初心者向け</span>
+                </div>
+                <div class="social-share">
+                    <span>シェアする：</span>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </article>
+            
+            <div class="pagination">
+                <a href="#" class="prev disabled"><i class="fas fa-chevron-left"></i> 前へ</a>
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="next">次へ <i class="fas fa-chevron-right"></i></a>
+            </div>
         </section>
 
         <aside class="sidebar">
+            <div class="widget author-widget">
+                <div class="author-image">
+                    <img src="https://via.placeholder.com/150" alt="著者のプロフィール画像">
+                </div>
+                <h3>KamineHiro</h3>
+                <p>Web開発者・ブロガー。新しい技術を学ぶことが大好きです。日常の発見や技術的な学びを共有しています。</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="widget search-widget">
+                <h3>検索</h3>
+                <form class="search-form">
+                    <input type="text" placeholder="キーワードを入力...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
             <div class="widget">
                 <h3>カテゴリー</h3>
                 <ul>
-                    <li><a href="#">技術</a></li>
-                    <li><a href="#">旅行</a></li>
-                    <li><a href="#">料理</a></li>
-                    <li><a href="#">趣味</a></li>
+                    <li><a href="#">技術 <span>(12)</span></a></li>
+                    <li><a href="#">旅行 <span>(5)</span></a></li>
+                    <li><a href="#">料理 <span>(8)</span></a></li>
+                    <li><a href="#">趣味 <span>(4)</span></a></li>
+                    <li><a href="#">プログラミング <span>(15)</span></a></li>
                 </ul>
             </div>
             
             <div class="widget">
                 <h3>最近の投稿</h3>
-                <ul>
-                    <li><a href="#">最初のブログ記事</a></li>
-                    <li><a href="#">2番目のブログ記事</a></li>
+                <ul class="recent-posts">
+                    <li>
+                        <div class="post-thumb">
+                            <img src="https://via.placeholder.com/50" alt="記事サムネイル">
+                        </div>
+                        <div class="post-info">
+                            <a href="#">初心者向けJavaScript入門</a>
+                            <span class="date">2023年10月22日</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post-thumb">
+                            <img src="https://via.placeholder.com/50" alt="記事サムネイル">
+                        </div>
+                        <div class="post-info">
+                            <a href="#">2番目のブログ記事</a>
+                            <span class="date">2023年10月18日</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post-thumb">
+                            <img src="https://via.placeholder.com/50" alt="記事サムネイル">
+                        </div>
+                        <div class="post-info">
+                            <a href="#">最初のブログ記事</a>
+                            <span class="date">2023年10月15日</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
             
             <div class="widget">
-                <h3>ブログについて</h3>
-                <p>これは私の個人ブログです。日常の出来事や興味のあることについて書いています。</p>
+                <h3>タグクラウド</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">ブログ</a>
+                    <a href="#" class="tag">プログラミング</a>
+                    <a href="#" class="tag">JavaScript</a>
+                    <a href="#" class="tag">HTML</a>
+                    <a href="#" class="tag">CSS</a>
+                    <a href="#" class="tag">Web開発</a>
+                    <a href="#" class="tag">React</a>
+                    <a href="#" class="tag">Node.js</a>
+                    <a href="#" class="tag">初心者向け</a>
+                </div>
+            </div>
+            
+            <div class="widget">
+                <h3>ニュースレター</h3>
+                <p>最新の記事や更新情報をメールで受け取りましょう。</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="メールアドレスを入力">
+                    <button type="submit">登録</button>
+                </form>
             </div>
         </aside>
     </main>
 
-    <footer>
+    <section class="cta-section">
         <div class="container">
-            <p>&copy; 2023 マイブログ. All rights reserved.</p>
+            <h2>プログラミングの旅を一緒に始めましょう</h2>
+            <p>定期的に更新される記事やチュートリアルをお見逃しなく。</p>
+            <a href="#" class="cta-button">今すぐ登録する</a>
         </div>
-    </footer>
+    </section>
+
+    <!-- フッタープレースホルダー -->
+    <div id="footer-placeholder"></div>
 
     <script src="script.js"></script>
 </body>

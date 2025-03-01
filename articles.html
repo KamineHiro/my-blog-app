@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記事一覧 - KamineHiroのブログ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ヘッダープレースホルダー -->
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <section class="articles-list">
+            <h2 class="page-title">記事一覧</h2>
+            
+            <div class="filter-options">
+                <div class="search-box">
+                    <input type="text" placeholder="記事を検索...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-dropdown">
+                    <select>
+                        <option value="">カテゴリーで絞り込む</option>
+                        <option value="tech">技術</option>
+                        <option value="programming">プログラミング</option>
+                        <option value="travel">旅行</option>
+                        <option value="cooking">料理</option>
+                        <option value="hobby">趣味</option>
+                    </select>
+                </div>
+                <div class="sort-dropdown">
+                    <select>
+                        <option value="newest">新しい順</option>
+                        <option value="oldest">古い順</option>
+                        <option value="popular">人気順</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/400x250" alt="初心者向けJavaScript入門">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="date">2023年10月22日</span>
+                        </div>
+                        <h3><a href="#">初心者向けJavaScript入門</a></h3>
+                        <p>JavaScriptを始めたばかりの方向けに、基本的な概念と実践的なコード例を紹介します。</p>
+                        <div class="article-footer">
+                            <span class="comments"><i class="far fa-comment"></i> 8</span>
+                            <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/400x250" alt="2番目のブログ記事">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Web開発</span>
+                            <span class="date">2023年10月18日</span>
+                        </div>
+                        <h3><a href="#">2番目のブログ記事</a></h3>
+                        <p>最近訪れた技術カンファレンスについての感想を書いています。多くの興味深いセッションがありました。</p>
+                        <div class="article-footer">
+                            <span class="comments"><i class="far fa-comment"></i> 3</span>
+                            <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/400x250" alt="最初のブログ記事">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">プログラミング</span>
+                            <span class="date">2023年10月15日</span>
+                        </div>
+                        <h3><a href="#">最初のブログ記事</a></h3>
+                        <p>プログラミングの旅を始めたきっかけについて書いています。私がプログラミングに興味を持ったのは高校生の時でした。</p>
+                        <div class="article-footer">
+                            <span class="comments"><i class="far fa-comment"></i> 5</span>
+                            <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/400x250" alt="CSSグリッドレイアウト入門">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">CSS</span>
+                            <span class="date">2023年10月10日</span>
+                        </div>
+                        <h3><a href="#">CSSグリッドレイアウト入門</a></h3>
+                        <p>モダンなWebデザインに欠かせないCSSグリッドレイアウトの基本的な使い方を解説します。</p>
+                        <div class="article-footer">
+                            <span class="comments"><i class="far fa-comment"></i> 4</span>
+                            <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Reactフックの使い方">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">React</span>
+                            <span class="date">2023年10月5日</span>
+                        </div>
+                        <h3><a href="#">Reactフックの使い方</a></h3>
+                        <p>useState、useEffect、useContextなど、Reactの主要なフックの使い方と実践的な例を紹介します。</p>
+                        <div class="article-footer">
+                            <span class="comments"><i class="far fa-comment"></i> 6</span>
+                            <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">
+                        <img src="https://via.placeholder.com/400x250" alt="京都旅行記">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">旅行</span>
+                            <span class="date">2023年9月28日</span>
+                        </div>
+                        <h3><a href="#">京都旅行記</a></h3>
+                        <p>先月行った京都旅行での体験や訪れた場所、おすすめのスポットについて紹介します。</p>
+                        <div class="article-footer">
+                            <span class="comments"><i class="far fa-comment"></i> 10</span>
+                            <a href="#" class="read-more">続きを読む <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="prev disabled"><i class="fas fa-chevron-left"></i> 前へ</a>
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="next">次へ <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </section>
+        
+        <aside class="sidebar">
+            <div class="widget search-widget">
+                <h3>検索</h3>
+                <form class="search-form">
+                    <input type="text" placeholder="キーワードを入力...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            
+            <div class="widget">
+                <h3>カテゴリー</h3>
+                <ul>
+                    <li><a href="#">技術 <span>(12)</span></a></li>
+                    <li><a href="#">旅行 <span>(5)</span></a></li>
+                    <li><a href="#">料理 <span>(8)</span></a></li>
+                    <li><a href="#">趣味 <span>(4)</span></a></li>
+                    <li><a href="#">プログラミング <span>(15)</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="widget">
+                <h3>タグクラウド</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">ブログ</a>
+                    <a href="#" class="tag">プログラミング</a>
+                    <a href="#" class="tag">JavaScript</a>
+                    <a href="#" class="tag">HTML</a>
+                    <a href="#" class="tag">CSS</a>
+                    <a href="#" class="tag">Web開発</a>
+                    <a href="#" class="tag">React</a>
+                    <a href="#" class="tag">Node.js</a>
+                    <a href="#" class="tag">初心者向け</a>
+                </div>
+            </div>
+            
+            <div class="widget">
+                <h3>アーカイブ</h3>
+                <ul>
+                    <li><a href="#">2023年10月 <span>(4)</span></a></li>
+                    <li><a href="#">2023年9月 <span>(6)</span></a></li>
+                    <li><a href="#">2023年8月 <span>(8)</span></a></li>
+                    <li><a href="#">2023年7月 <span>(5)</span></a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- フッタープレースホルダー -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
