@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* Dark mode is driven by a `.dark` class on <html> (see ThemeToggle). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Design tokens — derived from the awesome-design-skills "minimal" skill
+  (.codex/skills/design-system/SKILL.md):
+    fonts: Open Sans (body), Inter (display), Inconsolata (mono)
+    colors: primary #0C0C09, secondary #312C85, surface #F4F4F1,
+            success #16A34A, warning #D97706, danger #DC2626
+    spacing rhythm: 4 / 8 / 12 / 16 / 24 / 32
+  Principle: whitespace-first, restrained color, one accent, strong hierarchy.
+*/
+:root {
+  --bg: #f4f4f1;
+  --bg-elevated: #ffffff;
+  --ink: #0c0c09;
+  --ink-muted: #57564f;
+  --border: #e2e1da;
+  --accent: #312c85;
+  --accent-contrast: #ffffff;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+}
+
+.dark {
+  --bg: #0c0c09;
+  --bg-elevated: #17170f;
+  --ink: #f4f4f1;
+  --ink-muted: #a8a79d;
+  --border: #2a2a22;
+  --accent: #a5a1ec;
+  --accent-contrast: #0c0c09;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), var(--font-open-sans), sans-serif;
+  --font-mono: var(--font-inconsolata), ui-monospace, monospace;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:where(a) {
+  color: inherit;
+}
+
+/* Visible focus states — required by the skill (WCAG 2.2 AA, keyboard-first). */
+:where(a, button, input, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Article prose ---------- */
+.prose {
+  color: var(--ink);
+  line-height: 1.75;
+  font-size: 1.0625rem;
+}
+.prose > * + * {
+  margin-top: 1.25rem;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  line-height: 1.25;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.prose p,
+.prose ul,
+.prose ol {
+  color: var(--ink);
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
+.prose ul {
+  list-style: disc;
+}
+.prose ol {
+  list-style: decimal;
+}
+.prose li + li {
+  margin-top: 0.5rem;
+}
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+.prose :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ---------- Shiki (rehype-pretty-code) dual theme ---------- */
+.prose figure[data-rehype-pretty-code-figure] {
+  margin-top: 1.5rem;
+}
+.prose pre {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  padding: 1rem 1.15rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+[data-rehype-pretty-code-figure] [data-line] {
+  padding: 0 0.15rem;
+}
+/* Pick the correct Shiki color set per theme via the CSS variables it emits. */
+:root .prose pre span {
+  color: var(--shiki-light);
+}
+.dark .prose pre span {
+  color: var(--shiki-dark);
+}
+[data-rehype-pretty-code-title] {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 1rem;
+  background: var(--bg-elevated);
+}
+[data-rehype-pretty-code-title] + pre {
+  border-radius: 0 0 10px 10px;
+  margin-top: 0;
+}
